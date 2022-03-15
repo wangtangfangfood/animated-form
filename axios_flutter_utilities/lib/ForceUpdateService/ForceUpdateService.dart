@@ -10,7 +10,7 @@ class ForceUpdateService {
   bool updateApp = false;
 
   checkforUpdate() async {
-    VersionHelper.getVersion();
+    // VersionHelper.getVersion();
     dio.options.headers = {'content-type': 'application/json'};
 
     try {
@@ -22,6 +22,6 @@ class ForceUpdateService {
   }
 
   mustUpdate(Response response) {
-    VersionHelper.changeUpdateStatus(response.data[versionKey ?? 'version']);
+    // VersionHelper.changeUpdateStatus(response.data[versionKey ?? 'version']);
   }
 }

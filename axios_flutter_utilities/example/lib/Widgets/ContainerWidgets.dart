@@ -44,13 +44,12 @@ class _SelectableContainerState extends State<SelectableContainer> {
       curve: Curves.easeInOut,
       decoration: BoxDecoration(
           color: getColor(isSelected).withOpacity(0.6),
-
-          // gradient: isSelected
-          //     ? LinearGradient(colors: [
-          //         getColor(isSelected).withOpacity(0.6),
-          //         Colors.red[800]
-          //       ])
-          //     : LinearGradient(colors: [Colors.white, Colors.white]),
+          gradient: isSelected
+              ? LinearGradient(colors: [
+                  getColor(isSelected).withOpacity(0.6),
+                  Colors.green[800]
+                ])
+              : LinearGradient(colors: [Colors.white, Colors.white]),
           borderRadius: BorderRadius.circular(isSelected ? 8 : 0),
           boxShadow: [
             BoxShadow(
